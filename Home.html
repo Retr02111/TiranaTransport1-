@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TiranaTransport</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <!-- BoxIcons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- header design -->
+  <header class="header">
+    <a href="#" class="logo"></a>
+
+    <nav class="navbar">
+      <a href="#home" class="active">Faqja Kryesore</a>
+      <a href="#Maps">Maps</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="bx bx-moon" id="darkMode-icon"></div>
+    <div class="bx bx-menu" id="menu-icon"></div>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>TIRANA TRANSPORT</h1>
+      <p></p>
+      <p>
+        Mire se vini ne aplikacionin tone inovativ i projektuar për të bërê navigimin ne transportin urban dhe nderqytetas te Tiranes si nje perralle. Qofshin turiste apo banore te rinj, aplikacioni ynë eshte celesi juaj për te zhbllokuar rrjetin e transportit te qytetit me shpejtesi dhe efikasitet.
+      </p>
+      <div class="social-media">
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter'></i></a>
+        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+
+    <div class="profession-container">
+      <div class="profession-box">
+        <div class="profession" style="--i:0;">
+          <h3>Stacione</h3>
+        </div>
+        <div class="profession" style="--i:1;">
+          <h3>Terminale</h3>
+        </div>
+        <div class="profession" style="--i:2;">
+          <h3>Taxi</h3>
+        </div>
+        <div class="circle"></div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+
+    <div class="home-img">
+      <img src="img/bus.jpg" alt="">
+    </div>
+  </section>
+
+  <select id="routeSelect" style="margin: 10px; padding: 5px;">
+    <option value="">Zgjidh një linjë autobusi</option>
+  </select>
+
+  <section class="maps" id="Maps">
+    <h2 class="heading">Gjej <span>Stacionet</span></h2>
+    <div id="map" style="width: 90%; height: 500px; margin: 20px auto; border-radius: 10px;"></div>
+  </section>
+  
+  
+
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="#" alt="">
+    </div>
+
+    <div class="about-content">
+      <h2 class="heading">Rreth <span>TIRANA TRANSPORT</span></h2>
+      <h3>Pse duhet te zgjidhni aplikacionin tone?</h3>
+      <p>1. Funksionalitet Offline</p>
+      <p>2. Perditesime ne kohe reale.</p>
+      <p>3. I aksesueshem ne 2 gjuhe: shqip dhe anglisht.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Us!</span></h2>
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Emër Mbiemër">
+        <input type="email" placeholder="Adresa e Email-it">
+      </div>
+      <div class="input-box">
+        <input type="number" placeholder="Numri i tel">
+        <input type="text" placeholder="Email Subject">
+      </div>
+      <textarea cols="30" rows="10" placeholder="Mesazhi juaj"></textarea>
+      <input type="submit" value="Dërgo" class="btn">
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2023 | All Rights Reserved.</p>
+    </div>
+    <div class="footer-iconTop">
+      <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+  </footer>
+
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Custom JS (includes initMap function) -->
+  <script src="js/home.js"></script>
+
+  <!-- Google Maps API with async and defer -->
+  <script>
+    function loadMapScript() {
+      const script = document.createElement('script');
+      script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyA9D98oM4V1I6263C66foFWmxJv7r4s-S0&callback=initMap";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+
+    loadMapScript();
+  </script>
+
+</body>
+</html>
